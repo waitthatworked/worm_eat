@@ -41,9 +41,9 @@ last_key = 4
 regular_font = pygame.font.SysFont('Helvetica', 50)
 score_font = pygame.font.SysFont('Helvetica', BORDER_WIDTH-5)
 
-music = pygame.mixer.music.load('halo_music.mp3')
+music = pygame.mixer.music.load('sounds/halo_music.mp3')
 pygame.mixer.music.play(-1)
-eat_sound = pygame.mixer.Sound('munch.wav')
+eat_sound = pygame.mixer.Sound('sounds/munch.wav')
 
 # Displays player score
 def displayScore(score, game_over):
@@ -117,7 +117,6 @@ def gameLoop():
 
             # if a key is pressed...
             if event.type == pygame.KEYDOWN:
-                print("l: " +str(last_key))
                 # codes for the movement of the snake
                 if event.key == pygame.K_UP and last_key != 1:
                     last_key = 0
